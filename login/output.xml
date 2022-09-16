@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on linux)" generated="20220915 22:30:27.841" rpa="false" schemaversion="3">
+<suite id="s1" name="Edvora Login" source="/home/lelouch/Documents/neogcamp/Edvora/edvora_login.robot">
+<test id="s1-t1" name="Open Edvora Login Page" line="7">
+<kw name="Comment" library="BuiltIn">
+<arg>Chrome should open up with Gmail website</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:30:28.132" endtime="20220915 22:30:28.133"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testing-assessment-foh15kew9-edvora.vercel.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 22:30:28.134" level="INFO">Opening browser 'chrome' to base url 'https://testing-assessment-foh15kew9-edvora.vercel.app/'.</msg>
+<status status="PASS" starttime="20220915 22:30:28.133" endtime="20220915 22:30:29.698"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220915 22:30:29.698" endtime="20220915 22:30:29.700"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220915 22:30:29.700" endtime="20220915 22:30:31.710"/>
+</kw>
+<status status="PASS" starttime="20220915 22:30:28.131" endtime="20220915 22:30:31.710"/>
+</test>
+<test id="s1-t2" name="Validate Username entry Field" line="14">
+<kw name="Comment" library="BuiltIn">
+<arg>User should be able to enter their username</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:30:31.712" endtime="20220915 22:30:31.712"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:30:31.712" endtime="20220915 22:30:33.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class="chakra-input__group css-b61uh7"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 22:30:33.719" level="INFO">Clicking element '//div[@class="chakra-input__group css-b61uh7"]'.</msg>
+<status status="PASS" starttime="20220915 22:30:33.718" endtime="20220915 22:30:37.813"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="username"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220915 22:30:39.843" level="INFO">Current page contains element '//input[@class="chakra-input css-y572l6"][@autocomplete="username"]'.</msg>
+<status status="PASS" starttime="20220915 22:30:37.813" endtime="20220915 22:30:39.843"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="username"]</arg>
+<arg>testa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 22:30:39.844" level="INFO">Typing text 'testa' into text field '//input[@class="chakra-input css-y572l6"][@autocomplete="username"]'.</msg>
+<status status="PASS" starttime="20220915 22:30:39.844" endtime="20220915 22:30:45.995"/>
+</kw>
+<status status="PASS" starttime="20220915 22:30:31.711" endtime="20220915 22:30:45.996"/>
+</test>
+<test id="s1-t3" name="Validate password field" line="21">
+<kw name="Comment" library="BuiltIn">
+<arg>User should be able to enter password in the password field</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:30:45.997" endtime="20220915 22:30:45.998"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:30:45.998" endtime="20220915 22:30:48.002"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220915 22:30:50.025" level="INFO">Current page contains element '//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]'.</msg>
+<status status="PASS" starttime="20220915 22:30:48.003" endtime="20220915 22:30:50.025"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]</arg>
+<arg>testp</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 22:30:50.026" level="INFO">Typing password into text field '//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]'.</msg>
+<msg timestamp="20220915 22:30:54.092" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220915 22:30:56.306" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220915 22:30:50.026" endtime="20220915 22:30:56.306"/>
+</kw>
+<status status="PASS" starttime="20220915 22:30:45.997" endtime="20220915 22:30:56.307"/>
+</test>
+<test id="s1-t4" name="Verify the Login Button is present" line="28">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:30:56.309" endtime="20220915 22:30:58.314"/>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<arg>User should be able to find the Login Button</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:30:58.314" endtime="20220915 22:30:58.314"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//button[@class="chakra-button css-8h0nsd"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220915 22:31:00.340" level="INFO">Current page contains element '//button[@class="chakra-button css-8h0nsd"]'.</msg>
+<status status="PASS" starttime="20220915 22:30:58.315" endtime="20220915 22:31:00.340"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220915 22:31:00.340" endtime="20220915 22:31:02.401"/>
+</kw>
+<status status="PASS" starttime="20220915 22:30:56.308" endtime="20220915 22:31:02.401"/>
+</test>
+<test id="s1-t5" name="Login using empty Username &amp; empty Password" line="34">
+<kw name="Comment" library="BuiltIn">
+<arg>User should not be able to login using empty username</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:31:02.403" endtime="20220915 22:31:02.403"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testing-assessment-foh15kew9-edvora.vercel.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 22:31:02.404" level="INFO">Opening browser 'chrome' to base url 'https://testing-assessment-foh15kew9-edvora.vercel.app/'.</msg>
+<status status="PASS" starttime="20220915 22:31:02.404" endtime="20220915 22:31:06.132"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220915 22:31:06.132" endtime="20220915 22:31:06.133"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220915 22:31:06.133" endtime="20220915 22:31:08.143"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:31:08.143" endtime="20220915 22:31:10.148"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class="chakra-button css-8h0nsd"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220915 22:31:10.149" level="INFO">Clicking button '//button[@class="chakra-button css-8h0nsd"]'.</msg>
+<status status="PASS" starttime="20220915 22:31:10.148" endtime="20220915 22:31:20.267"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220915 22:31:20.267" endtime="20220915 22:31:22.272"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220915 22:31:22.272" endtime="20220915 22:31:24.329"/>
+</kw>
+<status status="PASS" starttime="20220915 22:31:02.402" endtime="20220915 22:31:24.330"/>
+</test>
+<test id="s1-t6" name="Login using valid Username &amp; empty password" line="44">
+<kw name="Comment" library="BuiltIn">
+<arg>User should not be able to login with empty username</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:31:24.331" endtime="20220915 22:31:24.332"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testing-assessment-foh15kew9-edvora.vercel.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 22:31:24.333" level="INFO">Opening browser 'chrome' to base url 'https://testing-assessment-foh15kew9-edvora.vercel.app/'.</msg>
+<status status="PASS" starttime="20220915 22:31:24.332" endtime="20220915 22:31:27.919"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220915 22:31:27.919" endtime="20220915 22:31:27.920"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220915 22:31:27.920" endtime="20220915 22:31:29.932"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:31:29.932" endtime="20220915 22:31:31.937"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class="chakra-input__group css-b61uh7"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 22:31:31.938" level="INFO">Clicking element '//div[@class="chakra-input__group css-b61uh7"]'.</msg>
+<status status="PASS" starttime="20220915 22:31:31.937" endtime="20220915 22:31:36.029"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="username"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220915 22:31:38.053" level="INFO">Current page contains element '//input[@class="chakra-input css-y572l6"][@autocomplete="username"]'.</msg>
+<status status="PASS" starttime="20220915 22:31:36.030" endtime="20220915 22:31:38.053"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="username"]</arg>
+<arg>testa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 22:31:38.054" level="INFO">Typing text 'testa' into text field '//input[@class="chakra-input css-y572l6"][@autocomplete="username"]'.</msg>
+<status status="PASS" starttime="20220915 22:31:38.053" endtime="20220915 22:31:44.208"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class="chakra-button css-8h0nsd"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220915 22:31:44.209" level="INFO">Clicking button '//button[@class="chakra-button css-8h0nsd"]'.</msg>
+<status status="PASS" starttime="20220915 22:31:44.209" endtime="20220915 22:31:54.319"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220915 22:31:54.320" endtime="20220915 22:31:56.323"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220915 22:31:56.324" endtime="20220915 22:31:58.382"/>
+</kw>
+<status status="PASS" starttime="20220915 22:31:24.330" endtime="20220915 22:31:58.383"/>
+</test>
+<test id="s1-t7" name="Login using empty username &amp; valid password" line="57">
+<kw name="Comment" library="BuiltIn">
+<arg>User should not be able to login with empty password</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:31:58.384" endtime="20220915 22:31:58.385"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testing-assessment-foh15kew9-edvora.vercel.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 22:31:58.385" level="INFO">Opening browser 'chrome' to base url 'https://testing-assessment-foh15kew9-edvora.vercel.app/'.</msg>
+<status status="PASS" starttime="20220915 22:31:58.385" endtime="20220915 22:32:02.016"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220915 22:32:02.017" endtime="20220915 22:32:02.017"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220915 22:32:02.017" endtime="20220915 22:32:04.028"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:32:04.028" endtime="20220915 22:32:06.033"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220915 22:32:08.055" level="INFO">Current page contains element '//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]'.</msg>
+<status status="PASS" starttime="20220915 22:32:06.033" endtime="20220915 22:32:08.056"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]</arg>
+<arg>testp</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 22:32:08.057" level="INFO">Typing password into text field '//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]'.</msg>
+<msg timestamp="20220915 22:32:12.133" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220915 22:32:14.359" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220915 22:32:08.056" endtime="20220915 22:32:14.359"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class="chakra-button css-8h0nsd"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220915 22:32:14.360" level="INFO">Clicking button '//button[@class="chakra-button css-8h0nsd"]'.</msg>
+<status status="PASS" starttime="20220915 22:32:14.360" endtime="20220915 22:32:24.476"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220915 22:32:24.476" endtime="20220915 22:32:26.481"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220915 22:32:26.482" endtime="20220915 22:32:28.540"/>
+</kw>
+<status status="PASS" starttime="20220915 22:31:58.383" endtime="20220915 22:32:28.540"/>
+</test>
+<test id="s1-t8" name="Login using valid credential" line="69">
+<kw name="Comment" library="BuiltIn">
+<arg>User should be able to login using valid username &amp; password</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220915 22:32:28.542" endtime="20220915 22:32:28.543"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testing-assessment-foh15kew9-edvora.vercel.app/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 22:32:28.544" level="INFO">Opening browser 'chrome' to base url 'https://testing-assessment-foh15kew9-edvora.vercel.app/'.</msg>
+<status status="PASS" starttime="20220915 22:32:28.543" endtime="20220915 22:32:32.228"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220915 22:32:32.229" endtime="20220915 22:32:32.229"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220915 22:32:32.229" endtime="20220915 22:32:34.241"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:32:34.242" endtime="20220915 22:32:36.247"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class="chakra-input__group css-b61uh7"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 22:32:36.248" level="INFO">Clicking element '//div[@class="chakra-input__group css-b61uh7"]'.</msg>
+<status status="PASS" starttime="20220915 22:32:36.247" endtime="20220915 22:32:40.345"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="username"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220915 22:32:42.368" level="INFO">Current page contains element '//input[@class="chakra-input css-y572l6"][@autocomplete="username"]'.</msg>
+<status status="PASS" starttime="20220915 22:32:40.345" endtime="20220915 22:32:42.368"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="username"]</arg>
+<arg>testa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 22:32:42.369" level="INFO">Typing text 'testa' into text field '//input[@class="chakra-input css-y572l6"][@autocomplete="username"]'.</msg>
+<status status="PASS" starttime="20220915 22:32:42.369" endtime="20220915 22:32:48.525"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220915 22:32:48.525" endtime="20220915 22:32:50.530"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220915 22:32:52.553" level="INFO">Current page contains element '//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]'.</msg>
+<status status="PASS" starttime="20220915 22:32:50.530" endtime="20220915 22:32:52.553"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]</arg>
+<arg>testp</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 22:32:52.554" level="INFO">Typing password into text field '//input[@class="chakra-input css-y572l6"][@autocomplete="current-password"]'.</msg>
+<msg timestamp="20220915 22:32:56.619" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220915 22:32:58.801" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220915 22:32:52.553" endtime="20220915 22:32:58.801"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[@class="chakra-button css-8h0nsd"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220915 22:32:58.802" level="INFO">Clicking button '//button[@class="chakra-button css-8h0nsd"]'.</msg>
+<status status="PASS" starttime="20220915 22:32:58.802" endtime="20220915 22:33:08.927"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>20 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220915 22:33:08.927" endtime="20220915 22:33:10.932"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${OUTPUT_DIR}/successful-login-profile-page.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220915 22:33:13.080" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="successful-login-profile-page.png"&gt;&lt;img src="successful-login-profile-page.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220915 22:33:10.932" endtime="20220915 22:33:13.080"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>20 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220915 22:33:13.080" endtime="20220915 22:33:15.085"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220915 22:33:15.085" endtime="20220915 22:33:17.144"/>
+</kw>
+<status status="PASS" starttime="20220915 22:32:28.541" endtime="20220915 22:33:17.144"/>
+</test>
+<status status="PASS" starttime="20220915 22:30:27.843" endtime="20220915 22:33:17.145"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Edvora Login">Edvora Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
